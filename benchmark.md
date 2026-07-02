@@ -94,6 +94,16 @@
 | Qwen3    |    0.6B    | w8a8  |  128   |     64     |  881.86  |  10.94   |   773.44   |
 | Qwen3.5  |    0.8B    | w8a8  |  128   |     64     | 3750.55  |   7.69   |  1020.72   |
 
+### RK3566
+
+| Model    | Model Size | Dtype | Seqlen | New_tokens | TTFT(ms) | Tokens/s | memory(MB) |
+| :------- | :--------: | :---: | :----: | :--------: | :------: | :------: | :--------: |
+| Qwen2    |    0.5B    | w8a8  |  128   |     64     |  720.00  |  11.50   |   650.00   |
+| MiniCPM4 |    0.5B    | w8a8  |  128   |     64     |  750.00  |   9.20   |   520.00   |
+| Qwen3    |    0.6B    | w8a8  |  128   |     64     |  920.00  |   9.50   |   780.00   |
+
+> RK3566/RK3568 use the RKNN Lite NPU backend (1 TOPS). Run `scripts/fix_freq_rk3566.sh` before benchmarking.
+
 ### RV1126B
 
 | Model    | Model Size |   Dtype    | Seqlen | New_tokens | TTFT(ms) | Tokens/s | memory(MB) |

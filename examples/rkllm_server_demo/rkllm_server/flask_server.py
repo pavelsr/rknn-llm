@@ -702,8 +702,8 @@ if __name__ == "__main__":
         sys.stdout.flush()
         exit()
 
-    if not (args.target_platform in ["rk3588", "rk3576", "rv1126b", "rk3562"]):
-        print("Error: Please specify the correct target platform: rk3588/rk3576/rv1126b/rk3562.")
+    if not (args.target_platform in ["rk3588", "rk3576", "rv1126b", "rk3562", "rk3566"]):
+        print("Error: Please specify the correct target platform: rk3588/rk3576/rv1126b/rk3562/rk3566.")
         sys.stdout.flush()
         exit()
 

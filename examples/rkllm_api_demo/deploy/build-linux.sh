@@ -5,7 +5,13 @@ if [[ -z ${BUILD_TYPE} ]];then
     BUILD_TYPE=Release
 fi
 
-GCC_COMPILER_PATH=~/opts/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu
+if [[ -z ${GCC_COMPILER_PATH} ]]; then
+    if command -v aarch64-linux-gnu-gcc >/dev/null 2>&1; then
+        GCC_COMPILER_PATH="$(command -v aarch64-linux-gnu-gcc | sed 's/-gcc$//')"
+    else
+        GCC_COMPILER_PATH=~/opts/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu
+    fi
+fi
 C_COMPILER=${GCC_COMPILER_PATH}-gcc
 CXX_COMPILER=${GCC_COMPILER_PATH}-g++
 STRIP_COMPILER=${GCC_COMPILER_PATH}-strip

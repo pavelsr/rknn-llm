@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 *.rkllm
+examples/rkllm_api_demo/deploy/build/
+examples/rkllm_api_demo/deploy/install/
+*.so.bak

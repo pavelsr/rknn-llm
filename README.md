@@ -19,6 +19,7 @@
 - RK3588 Series
 - RK3576 Series
 - RK3562 Series
+- RK3566 Series
 - RV1126B Series
 
 # Support Models
@@ -118,6 +119,7 @@ Usage: ./demo image_path encoder_model_path llm_model_path max_new_tokens max_co
 
 # Note
 
+- On RK3566/RK3568 boards, run `python3 scripts/patch_rk3566_support.py` after installing the toolkit wheel to enable the platform (v1.3.0 ships the Lite NPU backend but gates it in the API). Use `target_platform='rk3566'` with `num_npu_core=1` (RK3568 uses the same target).
 - The supported Python versions are:
 
   - Python 3.9

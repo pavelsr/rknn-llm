@@ -2,6 +2,7 @@
 ## v1.3.0
 
 - Added support for Qwen3.5, Gemma4, and SmolLM3 models.
+- Added RK3566/RK3568 (RKNN Lite) platform support.
 - Optimized the multimodal input interface and cache reuse strategy.
 - Added support for multiple EOS token IDs and introduced the ignore_eos_token parameter.
 - Optimized performance on 32-bit systems.
@@ -55,7 +56,7 @@
 - Supports embedding flash storage to reduce memory usage.
 - Introduces the GRQ Int4 quantization algorithm.
 - Supports GPTQ-Int8 model conversion.
-- Compatible with the RK3562 platform.
+- Compatible with the RK3562/RK3566/RK3568 platform.
 - Added support for visual multimodal models such as InternVL2, Janus, and Qwen2.5-VL.
 - Supports CPU core configuration.
 - Added support for Gemma3
