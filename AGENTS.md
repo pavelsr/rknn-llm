@@ -5,7 +5,7 @@
 ### What this repo is
 
 This is the **Rockchip RKLLM SDK** (`rknn-llm`), a toolkit for deploying LLMs/VLMs to
-Rockchip NPU SoCs (RK3588/RK3576/RK3562/RV1126B). It is an SDK, not a web app. Work is
+Rockchip NPU SoCs (RK3588/RK3576/RK3562/RK3566/RK3568/RV1126B). It is an SDK, not a web app. Work is
 split across two machines:
 
 - **RKLLM-Toolkit** (`rkllm-toolkit/`) — Python SDK that converts/quantizes HuggingFace or

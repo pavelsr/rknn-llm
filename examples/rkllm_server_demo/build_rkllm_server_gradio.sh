@@ -106,6 +106,7 @@ cp ../../scripts/fix_freq_rk3576.sh ./rkllm_server
 cp ../../scripts/fix_freq_rk3588.sh ./rkllm_server
 cp ../../scripts/fix_freq_rv1126b.sh ./rkllm_server
 cp ../../scripts/fix_freq_rk3562.sh ./rkllm_server
+cp ../../scripts/fix_freq_rk3566.sh ./rkllm_server
 
 adb_cmd push ./rkllm_server $WORKING_PATH
 

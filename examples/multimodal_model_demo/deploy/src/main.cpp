@@ -93,7 +93,7 @@ int main(int argc, char** argv)
         std::cerr << "Usage: " << argv[0]
                 << " image_path encoder_model_path llm_model_path max_new_tokens max_context_len rknn_core_num platform "
                 << "[img_start] [img_end] [img_content]\n"
-                << "  platform: rk3588 | rk3576 | rk3562 | rv1126b\n";
+                << "  platform: rk3588 | rk3576 | rk3562 | rk3566 | rk3568 | rv1126b\n";
         return -1;
     }
 
@@ -109,13 +109,13 @@ int main(int argc, char** argv)
     param.extend_param.base_domain_id = 0;
 
     const char* platform = argv[7];
-    if (strcmp(platform, "rv1126b") == 0 || strcmp(platform, "rk3562") == 0) {
+    if (strcmp(platform, "rv1126b") == 0 || strcmp(platform, "rk3562") == 0 || strcmp(platform, "rk3566") == 0 || strcmp(platform, "rk3568") == 0) {
         param.extend_param.base_domain_id = 0;
     } else if (strcmp(platform, "rk3588") == 0 || strcmp(platform, "rk3576") == 0) {
         param.extend_param.base_domain_id = 1;
     } else {
         std::cerr << "Error: Unknown platform '" << platform
-                  << "'. Supported: rk3588, rk3576, rk3562, rv1126b\n";
+                  << "'. Supported: rk3588, rk3576, rk3562, rk3566, rk3568, rv1126b\n";
         return -1;
     }
 
